@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            background-color: red;
+            height: 500px;
+            width: 500px;
+            margin: auto;
+            border: 2px solid royalblue;
+        }
+        
+        .div2 {
+            background-color: green;
+            height: 250px;
+            width: 250px;
+            margin: auto;
+        }
+        
+        .div3 {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            margin: auto;
+        }
+        
+        .borders {
+            border: 1px solid black;
+        }
+        
+        .color {
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1" class="div1 borders">
+
+        <div id="d2" class="div2 borders">
+
+            <div id="d3" class="div3 borders"></div>
+
+        </div>
+
+    </div>
+
+    <script>
+        const div3 = document.querySelector('#d3')
+        const div1 = document.querySelector('#d1')
+
+        div3.addEventListener('click', changeColor)
+
+
+        function changeColor() {
+            div1.classList.add("color")
+        }
+    </script>
+</body>
+
+</html>

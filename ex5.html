@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input1">
+    <div id='character'></div>
+
+    <script>
+        const input1 = document.querySelector('#input1')
+        const divRef = document.querySelector('#character')
+        input1.addEventListener('keypress', keyPress) //Assign the function reference to the event
+
+        function keyPress(event) { //This event raised before the character added to the value
+            divRef.innerHTML = "" //reset the error text
+                // loop that compares the pressed key between the numbers from 0-9
+            if (event.key === "Enter") { // if the pressed key is one of the numbers from 0-9 so the pressed key is a nubmer and you want to stop the loop and function
+                divRef.innerHTML = "The Value You Submitted Is: " + input1.value
+                    //*another option => divRef.innerHTML = `The Value You Submitted Is: ${input1.value}`
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+        
+        .blue {
+            background-color: blue;
+        }
+        
+        body {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<input type="text" class="color">
+<div> <input type="button" class="color"> </div>
+
+<body>
+
+
+    <script>
+        const tag = document.querySelectorAll('.color')
+        const body = document.querySelector('body')
+        body.addEventListener('click', changeTagColor)
+
+
+        function changeTagColor(event) {
+
+            event.target.classList.add("blue")
+
+        }
+    </script>
+</body>
+
+</html>
